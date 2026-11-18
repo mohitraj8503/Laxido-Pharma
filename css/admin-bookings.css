@@ -1,0 +1,282 @@
+/* ===== LAXIDO ADMIN BOOKING DASHBOARD ===== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    background: #f3f7fb;
+    color: #173b55;
+}
+
+.admin-bookings-page {
+    width: min(1180px, 92%);
+    margin: 0 auto;
+    padding: 55px 0 80px;
+}
+
+/* Header */
+.admin-page-header {
+    position: relative;
+    overflow: hidden;
+    padding: 42px 45px;
+    margin-bottom: 35px;
+    border-radius: 18px;
+    background: linear-gradient(120deg, #075d7a, #087fa5);
+    color: #ffffff;
+    box-shadow: 0 12px 30px rgba(7, 93, 122, .16);
+}
+
+.admin-eyebrow {
+    display: inline-block;
+    margin-bottom: 15px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #c8edf8;
+}
+
+.admin-page-header h1 {
+    margin: 0 0 12px;
+    font-size: clamp(28px, 4vw, 38px);
+    font-weight: 750;
+}
+
+.admin-page-header p {
+    margin: 0;
+    color: #e0f3f8;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* Booking sections */
+.admin-section {
+    margin-bottom: 30px;
+    padding: 30px;
+    border: 1px solid #e5edf4;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 5px 22px rgba(25, 65, 95, .05);
+}
+
+.admin-section-heading {
+    margin-bottom: 22px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #eaf0f5;
+}
+
+.admin-section-heading h2 {
+    margin: 0 0 7px;
+    color: #173b55;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.admin-section-heading p {
+    margin: 0;
+    color: #718397;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Individual booking cards */
+.diagnostic-test-card {
+    margin: 0 0 16px;
+    padding: 23px 25px;
+    border: 1px solid #e5edf4;
+    border-left: 4px solid #087fa5;
+    border-radius: 12px;
+    background: #fbfdff;
+    transition: transform .25s ease, box-shadow .25s ease;
+    animation: adminCardEnter .5s ease both;
+}
+
+.diagnostic-test-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(23, 59, 85, .09);
+}
+
+.diagnostic-test-card h3 {
+    margin: 0 0 17px;
+    color: #087fa5;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.diagnostic-test-card p {
+    display: inline-block;
+    margin: 5px 22px 8px 0;
+    color: #536b7e;
+    font-size: 14px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.diagnostic-test-card p:last-of-type {
+    font-weight: 700;
+    color: #173b55;
+}
+
+/* Action buttons */
+.appointment-confirm-btn,
+.appointment-cancel-btn {
+    min-width: 105px;
+    padding: 11px 18px;
+    margin: 12px 9px 0 0;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .25s ease;
+}
+
+.appointment-confirm-btn {
+    background: #087fa5;
+    color: #ffffff;
+}
+
+.appointment-confirm-btn:hover {
+    background: #075d7a;
+    box-shadow: 0 5px 14px rgba(8, 127, 165, .22);
+    transform: translateY(-2px);
+}
+
+.appointment-cancel-btn {
+    background: #fff0f0;
+    color: #c62828;
+    border-color: #ffd5d5;
+}
+
+.appointment-cancel-btn:hover {
+    background: #c62828;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.appointment-confirm-btn:disabled,
+.appointment-cancel-btn:disabled {
+    opacity: .55;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Empty and loading messages */
+.admin-section #adminBookingList > p,
+.admin-section #adminAppointmentList > p {
+    padding: 20px;
+    border-radius: 9px;
+    background: #f5f9fc;
+    color: #718397;
+    text-align: center;
+}
+
+/* Entrance animation */
+@keyframes adminCardEnter {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 650px) {
+    .admin-bookings-page {
+        width: 94%;
+        padding: 25px 0 45px;
+    }
+
+    .admin-page-header {
+        padding: 30px 23px;
+        border-radius: 13px;
+    }
+
+    .admin-section {
+        padding: 20px 15px;
+        border-radius: 12px;
+    }
+
+    .admin-section-heading h2 {
+        font-size: 20px;
+    }
+
+    .diagnostic-test-card {
+        padding: 19px 16px;
+    }
+
+    .diagnostic-test-card p {
+        display: block;
+        margin: 7px 0;
+    }
+
+    .appointment-confirm-btn,
+    .appointment-cancel-btn {
+        min-width: 95px;
+        padding: 10px 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+    }
+}
+
+/* Booking details: vertical layout */
+.diagnostic-test-card p {
+    display: block;
+    width: 100%;
+    margin: 9px 0;
+    line-height: 1.7;
+    text-align: left;
+}
+
+
+/* Admin Navigation */
+.admin-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.admin-navigation a {
+    display: inline-block;
+    padding: 12px 20px;
+    border: 1px solid #d8e5ef;
+    border-radius: 9px;
+    background: #ffffff;
+    color: #245477;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+.admin-navigation a:hover,
+.admin-navigation a.active {
+    background: #176b87;
+    color: #ffffff;
+    border-color: #176b87;
+}
+
+@media (max-width: 600px) {
+    .admin-navigation {
+        gap: 8px;
+    }
+
+    .admin-navigation a {
+        padding: 10px 13px;
+        font-size: 12px;
+    }
+}

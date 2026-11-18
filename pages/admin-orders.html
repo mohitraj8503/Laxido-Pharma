@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Orders | Laxido Pharma</title>
+    <link rel="stylesheet" href="../css/admin-orders.css">
+</head>
+<body>
+
+<main class="admin-orders-page">
+    <header class="admin-orders-header">
+        <span>LAXIDO PHARMA / ADMIN PANEL</span>
+        <nav class="admin-navigation">
+            <a href="admin-bookings.html">Booking Management</a>
+            <a href="admin-orders.html" class="active">Order Management</a>
+            <a href="admin-pharmacy.html">Pharmacy Requests</a>
+        </nav>
+        <h1>Order Management</h1>
+        <p>View customer orders and manage their delivery status.</p>
+    </header>
+
+    <section class="orders-overview">
+        <article class="order-stat">
+            <span>Total Orders</span>
+            <strong id="totalOrders">0</strong>
+        </article>
+        <article class="order-stat">
+            <span>Pending Orders</span>
+            <strong id="pendingOrders">0</strong>
+        </article>
+        <article class="order-stat">
+            <span>Completed Orders</span>
+            <strong id="completedOrders">0</strong>
+        </article>
+    </section>
+
+    <section class="admin-orders-list">
+        <div class="orders-list-heading">
+            <h2>Customer Orders</h2>
+            <p>Review order details and update order status.</p>
+        </div>
+
+        <div class="orders-filters">
+            <input
+                type="search"
+                id="orderSearch"
+                placeholder="Search by Order ID or customer name"
+            >
+
+            <select id="orderStatusFilter">
+                <option value="all">All Statuses</option>
+                <option value="Placed">Placed</option>
+                <option value="Pending">Pending</option>
+                <option value="Confirmed">Confirmed</option>
+                <option value="Delivered">Delivered</option>
+                <option value="Cancelled">Cancelled</option>
+            </select>
+        </div>
+
+        <div id="adminOrdersList">
+            <p>Loading orders...</p>
+        </div>
+    </section>
+</main>
+
+<script src="../js/admin-orders.js"></script>
+</body>
+</html>

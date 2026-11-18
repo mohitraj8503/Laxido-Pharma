@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Location | Laxido Pharmaceuticals</title>
+    <link rel="stylesheet" href="../css/custom.css">
+</head>
+
+<body>
+
+    <main class="location-page">
+        <div class="location-card">
+
+            <h1>Select Your Location</h1>
+            <p>Choose your state, city and enter your PIN code.</p>
+
+            <form id="locationForm">
+
+                <label for="state">Select State / Union Territory</label>
+
+                <select id="state" name="state" required disabled>
+                    <option value="">Loading states...</option>
+                </select>
+
+                <label for="city">Select City</label>
+
+                <select id="city" name="city" required disabled>
+                    <option value="">Choose your city</option>
+                </select>
+
+                <label for="pincode">PIN Code</label>
+
+                <input
+                    type="text"
+                    id="pincode"
+                    name="pincode"
+                    placeholder="Enter 6-digit PIN code"
+                    maxlength="6"
+                    inputmode="numeric"
+                    pattern="[0-9]{6}"
+                    required
+                >
+
+                <button type="submit">Save Location</button>
+
+                <p id="locationMessage" role="status"></p>
+
+            </form>
+        </div>
+    </main>
+
+    <script src="../js/custom.js"></script>
+
+</body>
+</html>

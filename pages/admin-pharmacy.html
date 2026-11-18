@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy Requests | Laxido Pharma</title>
+    <link rel="stylesheet" href="../css/admin-orders.css">
+    <link rel="stylesheet" href="../css/admin-pharmacy.css">
+</head>
+<body>
+
+<main class="admin-orders-page">
+    <header class="admin-orders-header">
+        <span>LAXIDO PHARMA / ADMIN PANEL</span>
+        <nav class="admin-navigation">
+            <a href="admin-bookings.html">Booking Management</a>
+            <a href="admin-orders.html">Order Management</a>
+            <a href="admin-pharmacy.html" class="active">Pharmacy Requests</a>
+        </nav>
+        <h1>Pharmacy Request Management</h1>
+        <p>View medicine delivery requests and manage their status.</p>
+    </header>
+
+    <section class="orders-overview">
+        <article class="order-stat">
+            <span>Total Requests</span>
+            <strong id="totalRequests">0</strong>
+        </article>
+        <article class="order-stat">
+            <span>Pending Requests</span>
+            <strong id="pendingRequests">0</strong>
+        </article>
+        <article class="order-stat">
+            <span>Completed Deliveries</span>
+            <strong id="completedRequests">0</strong>
+        </article>
+    </section>
+
+    <section class="admin-orders-list">
+        <div class="orders-list-heading">
+            <h2>Medicine Delivery Requests</h2>
+            <p>Review customer details and update delivery status.</p>
+        </div>
+
+        <div id="adminPharmacyList">
+            <p>Loading pharmacy requests...</p>
+        </div>
+    </section>
+</main>
+
+<script src="../js/admin-pharmacy.js"></script>
+</body>
+</html>

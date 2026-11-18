@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Register | Laxido Pharma</title>
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+
+<main class="auth-page">
+
+    <section class="auth-layout">
+
+        <!-- LEFT BRANDING PANEL -->
+        <aside class="auth-visual">
+
+            <div class="visual-brand">
+                <div class="brand-symbol">✚</div>
+                <span>LAXIDO <strong>PHARMA</strong></span>
+            </div>
+
+            <div class="visual-content">
+                <span class="visual-tag">YOUR HEALTH, OUR PRIORITY</span>
+
+                <h1>
+                    Better Healthcare.
+                    <span>Better Life.</span>
+                </h1>
+
+                <p>
+                    Your trusted healthcare partner for medicines,
+                    diagnostics and quality medical services.
+                    Care that comes closer to you.
+                </p>
+
+                <div class="visual-features">
+                    <div class="visual-feature">
+                        <span>✦</span>
+                        <div>
+                            <strong>Trusted Healthcare</strong>
+                            <small>Care you can count on</small>
+                        </div>
+                    </div>
+
+                    <div class="visual-feature">
+                        <span>✚</span>
+                        <div>
+                            <strong>Easy Access</strong>
+                            <small>Healthcare at your fingertips</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="visual-footer">
+                <span>CARE • TRUST • WELLNESS</span>
+                <span>© 2026 Laxido Pharma</span>
+            </div>
+
+            <div class="visual-orb orb-one"></div>
+            <div class="visual-orb orb-two"></div>
+
+        </aside>
+
+        <!-- RIGHT LOGIN PANEL -->
+        <section class="auth-card">
+
+            <div class="auth-heading">
+                <span class="form-tag">WELCOME TO LAXIDO</span>
+                <h2>Access Your Account</h2>
+                <p>Login or create your account to continue.</p>
+            </div>
+
+            <div class="auth-tabs">
+                <button type="button" class="auth-tab active" id="loginTab">
+                    Login
+                </button>
+                <button type="button" class="auth-tab" id="registerTab">
+                    Register
+                </button>
+            </div>
+
+            <form id="loginForm" class="auth-form">
+                <h3>Welcome Back!</h3>
+                <p>Enter your details to access your account.</p>
+
+                <label>Email Address</label>
+                <input type="email" id="loginEmail"
+                    placeholder="Enter your email" required>
+
+                <label>Password</label>
+                <input type="password" id="loginPassword"
+                    placeholder="Enter your password" required>
+
+                <button type="submit" class="auth-submit">
+                    Login to Account →
+                </button>
+            </form>
+
+            <form id="registerForm" class="auth-form hidden">
+                <h3>Create Your Account</h3>
+                <p>Join Laxido Pharma for better healthcare access.</p>
+
+                <label>Full Name</label>
+                <input type="text" id="registerName"
+                    placeholder="Enter your full name" required>
+
+                <label>Email Address</label>
+                <input type="email" id="registerEmail"
+                    placeholder="Enter your email" required>
+
+                <label>Phone Number</label>
+                <input type="tel" id="registerPhone"
+                    placeholder="Enter 10-digit phone number"
+                    pattern="[0-9]{10}" required>
+
+                <label>Password</label>
+                <input type="password" id="registerPassword"
+                    placeholder="Create a password"
+                    minlength="6" required>
+
+                <button type="submit" class="auth-submit">
+                    Create Account →
+                </button>
+            </form>
+
+            <p id="authMessage" role="status"></p>
+
+            <a href="../index.html" class="back-home">
+                ← Back to Home
+            </a>
+
+        </section>
+
+    </section>
+
+</main>
+
+<script src="../js/login.js"></script>
+</body>
+</html>

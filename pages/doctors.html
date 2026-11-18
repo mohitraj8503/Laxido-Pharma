@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Doctors | Laxido Pharmaceuticals</title>
+
+    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="../css/doctors.css">
+</head>
+
+<body>
+
+    <header class="doctors-header">
+        <a href="../index.html" class="doctors-logo">
+            <img src="../assets/laxido_logo.png" alt="Laxido Pharmaceuticals">
+        </a>
+
+        <nav class="doctors-nav">
+            <a href="../index.html">Home</a>
+            <a href="location.html">Select Location</a>
+            <a href="doctors.html" class="active">Our Doctors</a>
+        </nav>
+
+        <div class="nav-right-content">
+            <a href="#appointment" class="doctors-header-button">
+                Book Appointment
+            </a>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="doctors-hero">
+            <div class="doctors-hero-content">
+                <span class="doctors-tag">EXPERT MEDICAL CARE</span>
+
+                <h1>Find the Right Doctor for Your Health</h1>
+
+                <p>
+                    Consult experienced specialists and get quality
+                    healthcare support from the comfort of your home.
+                </p>
+
+                <a href="#doctor-list" class="doctors-main-button">
+                    Explore Doctors
+                </a>
+            </div>
+        </section>
+
+        <section class="doctors-directory" id="doctor-list">
+
+            <div class="doctors-section-heading">
+                <span>OUR MEDICAL TEAM</span>
+                <h2>Meet Our Specialists</h2>
+                <p>Choose a specialist according to your healthcare needs.</p>
+            </div>
+
+            <div class="doctor-grid">
+
+                <article class="doctor-card">
+                    <div class="doctor-avatar">AS</div>
+
+                    <div class="doctor-info">
+                        <span class="doctor-specialty">Cardiology</span>
+                        <h3>Dr. Aditi Sharma</h3>
+                        <p>MBBS, MD, DM (Cardiology)</p>
+                        <span class="doctor-experience">12 Years Experience</span>
+                        <span class="doctor-location">New Delhi, India</span>
+
+                        <a href="#appointment" class="doctor-book-button">
+                            Book Consultation
+                        </a>
+                    </div>
+                </article>
+
+                <article class="doctor-card">
+                    <div class="doctor-avatar">VP</div>
+
+                    <div class="doctor-info">
+                        <span class="doctor-specialty">Nephrology</span>
+                        <h3>Dr. Vivek Patil</h3>
+                        <p>MBBS, MD, DM (Nephrology)</p>
+                        <span class="doctor-experience">10 Years Experience</span>
+                        <span class="doctor-location">Pune, Maharashtra</span>
+
+                        <a href="#appointment" class="doctor-book-button">
+                            Book Consultation
+                        </a>
+                    </div>
+                </article>
+
+                <article class="doctor-card">
+                    <div class="doctor-avatar">MN</div>
+
+                    <div class="doctor-info">
+                        <span class="doctor-specialty">Endocrinology</span>
+                        <h3>Dr. Meera Nair</h3>
+                        <p>MBBS, MD, DM (Endocrinology)</p>
+                        <span class="doctor-experience">8 Years Experience</span>
+                        <span class="doctor-location">Bengaluru, Karnataka</span>
+
+                        <a href="#appointment" class="doctor-book-button">
+                            Book Consultation
+                        </a>
+                    </div>
+                </article>
+
+                <article class="doctor-card">
+                    <div class="doctor-avatar">KS</div>
+
+                    <div class="doctor-info">
+                        <span class="doctor-specialty">Orthopedics</span>
+                        <h3>Dr. Kabir Sethi</h3>
+                        <p>MBBS, MS (Orthopedics)</p>
+                        <span class="doctor-experience">9 Years Experience</span>
+                        <span class="doctor-location">Shimla, Himachal Pradesh</span>
+
+                        <a href="#appointment" class="doctor-book-button">
+                            Book Consultation
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+        <section class="doctor-appointment" id="appointment">
+            <div class="appointment-container">
+                <h2>Book Your Consultation</h2>
+                <p>Fill in your details to schedule an appointment with our doctors.</p>
+
+                <form id="appointmentForm">
+                    <div class="appointment-field">
+                        <label for="patientName">Patient Name</label>
+                        <input type="text" id="patientName" name="patientName"
+                               placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="appointment-field">
+                        <label for="patientEmail">Email Address</label>
+                        <input type="email" id="patientEmail" name="patientEmail"
+                               placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="appointment-field">
+                        <label for="patientPhone">Phone Number</label>
+                        <input type="tel" id="patientPhone" name="patientPhone"
+                               placeholder="Enter your phone number" pattern="[0-9]{10}" required>
+                    </div>
+
+                    <div class="appointment-field">
+                        <label for="doctorName">Select Doctor</label>
+                        <select id="doctorName" name="doctorName" required>
+                            <option value="">Choose a doctor</option>
+                            <option value="Dr. Aditi Sharma">Dr. Aditi Sharma - Cardiology</option>
+                            <option value="Dr. Vivek Patil">Dr. Vivek Patil - Nephrology</option>
+                            <option value="Dr. Meera Nair">Dr. Meera Nair - Endocrinology</option>
+                            <option value="Dr. Kabir Sethi">Dr. Kabir Sethi - Orthopedics</option>
+                        </select>
+                    </div>
+
+                    <div class="appointment-field">
+                        <label for="appointmentDate">Appointment Date</label>
+                        <input type="date" id="appointmentDate" name="appointmentDate" required>
+                    </div>
+
+                    <div class="appointment-field">
+                        <label for="appointmentTime">Appointment Time</label>
+                        <select id="appointmentTime" name="appointmentTime" required>
+                            <option value="">Choose a time</option>
+                            <option value="10:00 AM">10:00 AM</option>
+                            <option value="11:00 AM">11:00 AM</option>
+                            <option value="12:00 PM">12:00 PM</option>
+                            <option value="02:00 PM">02:00 PM</option>
+                            <option value="03:00 PM">03:00 PM</option>
+                            <option value="04:00 PM">04:00 PM</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="appointment-submit">
+                        Book Appointment
+                    </button>
+
+                    <p id="appointmentMessage" role="status"></p>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="doctors-footer">
+        <p>© 2026 Laxido Pharmaceuticals. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/custom.js"></script>
+    <script src="../js/doctors.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,442 @@
+
+/* =================================
+   LAXIDO - LOCATION SELECTOR
+================================= */
+
+.location-page {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 20px;
+    background:
+        radial-gradient(circle at 10% 15%, rgba(39, 173, 205, 0.18), transparent 28%),
+        radial-gradient(circle at 90% 85%, rgba(24, 120, 190, 0.16), transparent 30%),
+        linear-gradient(135deg, #eaf7fc, #f4f9fd 55%, #e6f3fa);
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+.location-page::before,
+.location-page::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.location-page::before {
+    width: 280px;
+    height: 280px;
+    top: -100px;
+    right: -70px;
+    border: 45px solid rgba(19, 145, 183, 0.06);
+}
+
+.location-page::after {
+    width: 220px;
+    height: 220px;
+    bottom: -100px;
+    left: -60px;
+    border: 35px solid rgba(19, 100, 170, 0.06);
+}
+
+/* Main Card */
+
+.location-card {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 540px;
+    padding: 48px 45px;
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 24px;
+    box-shadow:
+        0 25px 65px rgba(24, 73, 110, 0.11),
+        0 5px 15px rgba(24, 73, 110, 0.04);
+}
+
+/* Heading */
+
+.location-card h1 {
+    margin: 0 0 12px;
+    color: #123b60;
+    font-size: 32px;
+    font-weight: 750;
+    letter-spacing: -1px;
+    line-height: 1.3;
+}
+
+.location-card h1::before {
+    content: "✦";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 22px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #087eb5, #21b3bd);
+    color: white;
+    font-size: 25px;
+    box-shadow: 0 8px 18px rgba(8, 126, 181, 0.2);
+}
+
+.location-card > p {
+    margin: 0 0 30px;
+    color: #718397;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* Form */
+
+#locationForm {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels */
+
+.location-card label {
+    display: block;
+    margin: 20px 0 9px;
+    color: #24445e;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* Input and Select */
+
+.location-card select,
+.location-card input {
+    width: 100%;
+    height: 54px;
+    padding: 0 16px;
+    border: 1px solid #dce7ef;
+    border-radius: 11px;
+    outline: none;
+    background: #f9fbfd;
+    color: #24445e;
+    font-family: inherit;
+    font-size: 15px;
+    transition: all 0.25s ease;
+}
+
+.location-card select {
+    cursor: pointer;
+}
+
+.location-card select:hover,
+.location-card input:hover {
+    border-color: #9bcbdc;
+}
+
+.location-card select:focus,
+.location-card input:focus {
+    border-color: #0789bd;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(8, 137, 189, 0.10);
+}
+
+.location-card select:disabled {
+    background: #edf2f6;
+    color: #9aa9b7;
+    cursor: not-allowed;
+}
+
+/* Save Button */
+
+.location-card button {
+    width: 100%;
+    height: 56px;
+    margin-top: 32px;
+    border: none;
+    border-radius: 11px;
+    background: linear-gradient(110deg, #087db5, #16a6b6);
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+    box-shadow: 0 9px 20px rgba(8, 125, 181, 0.19);
+    transition: all 0.25s ease;
+}
+
+.location-card button:hover {
+    background: linear-gradient(110deg, #066a9b, #0b899e);
+    box-shadow: 0 12px 25px rgba(8, 125, 181, 0.26);
+    transform: translateY(-2px);
+}
+
+.location-card button:active {
+    transform: translateY(0);
+}
+
+/* Success / Error Message */
+
+#locationMessage {
+    min-height: 20px;
+    margin: 15px 0 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+    .location-page {
+        padding: 30px 16px;
+    }
+
+    .location-card {
+        padding: 32px 23px;
+        border-radius: 19px;
+    }
+
+    .location-card h1 {
+        font-size: 27px;
+    }
+}
+
+@media (max-width: 360px) {
+    .location-card {
+        padding: 25px 18px;
+    }
+}
+
+
+
+/* Language Switcher */
+
+.language-switch {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px;
+    background: #eef7fb;
+    border: 1px solid #d8e8ef;
+    border-radius: 30px;
+    flex-shrink: 0;
+}
+
+.language-switch button {
+    border: none;
+    border-radius: 20px;
+    padding: 7px 11px;
+    background: transparent;
+    color: #24445e;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.language-switch button.active {
+    background: #087eb5;
+    color: #ffffff;
+}
+
+.location-card .language-switch {
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+    .language-switch button {
+        padding: 6px 9px;
+        font-size: 11px;
+    }
+}
+
+
+/* Homepage Doctors Navigation Link */
+
+.home-doctors-nav-item {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.home-doctors-nav-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 14px;
+    color: #252B61;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 650;
+    border-radius: 8px;
+    transition: all 0.25s ease;
+}
+
+.home-doctors-nav-link:hover {
+    color: #087eb5;
+    background: #eaf7fb;
+}
+
+@media (max-width: 767px) {
+    .home-doctors-nav-item {
+        margin-top: 8px;
+    }
+}
+
+/* Homepage Treatment Book Now Buttons */
+
+a.button-wrapper {
+    width: 145px !important;
+    height: 46px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px;
+    padding: 0 14px;
+    border-radius: 8px;
+    background: linear-gradient(110deg, #087eb5, #16a6b6);
+    text-decoration: none !important;
+    overflow: visible !important;
+    transition: all 0.3s ease;
+}
+
+a.button-wrapper .button-text {
+    width: auto !important;
+    height: auto !important;
+    display: block !important;
+    position: static !important;
+    transform: none !important;
+    color: #ffffff !important;
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+a.button-wrapper .button-arrow {
+    width: 16px !important;
+    height: 16px !important;
+    display: block !important;
+    position: static !important;
+}
+
+a.button-wrapper:hover {
+    background: linear-gradient(110deg, #066a9b, #0b899e);
+    transform: translateY(-2px);
+}
+
+
+/* Admin Bookings shortcut */
+.admin-shortcut {
+    text-align: right;
+    padding: 12px 5%;
+    background: #f5f8fc;
+}
+
+.admin-shortcut a {
+    display: inline-block;
+    padding: 10px 18px;
+    background: #1769aa;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.admin-shortcut a:hover {
+    background: #10558c;
+}
+
+/* Make Admin Bookings shortcut visible */
+.admin-shortcut {
+    display: block !important;
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    z-index: 99999;
+    padding: 10px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+}
+
+.admin-shortcut a {
+    display: inline-block;
+    background: #1769aa;
+    color: #ffffff !important;
+    padding: 12px 18px;
+    border-radius: 6px;
+    text-decoration: none !important;
+    font-weight: 600;
+}
+
+/* LIVE CART COUNTER */
+.nav-right-link {
+    position: relative;
+}
+
+.cart-count {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    min-width: 19px;
+    height: 19px;
+    padding: 0 5px;
+    margin-left: 6px;
+    border-radius: 50px;
+    background: #e53935;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+
+/* HOMEPAGE BANNER - MOBILE RESPONSIVE FIX */
+@media screen and (max-width: 479px) {
+    .banner-test-item-wrap {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 18px;
+        margin-bottom: 32px;
+    }
+
+    .banner-test-item.ml-10 {
+        margin-left: 0;
+    }
+
+    .banner-test-item-title {
+        font-size: 18px;
+    }
+}
+
+/* MOBILE BANNER HEADING FIX */
+@media screen and (max-width: 479px) {
+    .banner-title {
+        font-size: 42px;
+        line-height: 1.15;
+    }
+}
+
+/* Homepage doctor cards - consistent image size */
+.doctor-tab-thumbnail-wrap {
+    height: 260px;
+    overflow: hidden;
+    border-radius: 22px;
+}
+
+.doctor-tab-thumbnail-wrap .doctor-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Keep doctor faces visible */
+.doctor-tab-thumbnail-wrap .doctor-image {
+    object-position: center 20%;
+}
+
+/* Keep doctor faces visible */
+.doctor-tab-thumbnail-wrap .doctor-image {
+    object-position: center 20%;
+}

@@ -1,0 +1,64 @@
+@import url("./diagnostics.css");
+.tele-book-btn,.tele-hero a,#teleBookingForm button{background:#1769aa;color:white;padding:12px 20px;border:0;border-radius:6px;cursor:pointer;text-decoration:none}
+#teleBookingForm{max-width:700px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+#teleBookingForm input,#teleBookingForm select,#teleBookingForm textarea{box-sizing:border-box;width:100%;padding:12px;border:1px solid #ccc;border-radius:6px}
+#teleBookingForm textarea,#teleBookingForm button,#teleBookingForm #teleMessage{grid-column:1/-1}
+@media(max-width:600px){#teleBookingForm{grid-template-columns:1fr}#teleBookingForm>*{grid-column:1}}
+.tele-hero .banner-content{max-width:100%;width:100%;}
+.tele-hero .banner-content h1{font-size:clamp(38px,5vw,64px)!important;line-height:1.12!important;max-width:850px;width:100%;overflow-wrap:break-word;}
+.tele-hero .banner-content p{font-size:18px;line-height:1.6;}
+.tele-hero{overflow:hidden;}
+@media(max-width:600px){.tele-hero .banner-content h1{font-size:38px!important;}}
+.tele-hero .banner-content h1{display:block!important;letter-spacing:normal!important;word-spacing:0.18em!important;white-space:normal!important;line-height:1.2!important;margin-bottom:20px!important;}
+.tele-hero .banner-content p{display:block!important;visibility:visible!important;opacity:1!important;color:#fff!important;font-size:18px!important;line-height:1.6!important;margin:0 0 18px!important;max-width:650px;}
+
+/* TELECONSULTATION FORM - MOBILE SPACING FIX */
+#tele-booking .diagnostics-container {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 25px 18px;
+}
+
+#teleBookingForm {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 600px;
+    margin: 25px auto 0;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+}
+
+#teleBookingForm > * {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    grid-column: 1;
+}
+
+#teleBookingForm label {
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+#teleBookingForm input,
+#teleBookingForm select,
+#teleBookingForm textarea {
+    min-height: 48px;
+}
+
+#teleBookingForm textarea {
+    min-height: 110px;
+}
+
+@media (min-width: 601px) {
+    #teleBookingForm {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+/* MOBILE FORM SPACING FIX */
+#tele-booking .diagnostics-container{box-sizing:border-box;width:100%;padding:25px 18px!important}
+#teleBookingForm{box-sizing:border-box;width:100%;max-width:600px;margin:25px auto 0;display:grid;grid-template-columns:minmax(0,1fr);gap:12px}
+#teleBookingForm>*{box-sizing:border-box;width:100%;min-width:0;grid-column:1}
+#teleBookingForm label{margin:8px 0 2px}
+#teleBookingForm input,#teleBookingForm select,#teleBookingForm textarea{width:100%;min-height:48px;box-sizing:border-box}
+#teleBookingForm textarea{min-height:110px}

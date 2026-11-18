@@ -1,0 +1,81 @@
+/* ===== PHARMACY REQUEST MANAGEMENT ===== */
+
+.admin-orders-page {
+    animation: pharmacyAdminEnter .6s ease both;
+}
+
+.admin-orders-header {
+    padding: 25px 0;
+}
+
+.admin-orders-header h1 {
+    color: #173b55;
+    letter-spacing: -1px;
+}
+
+.admin-orders-list {
+    box-shadow: 0 12px 35px rgba(23, 59, 85, .06);
+}
+
+.admin-order-card {
+    background: linear-gradient(145deg, #ffffff, #f9fcfe);
+    border-radius: 15px;
+    padding: 25px;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.admin-order-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(23, 59, 85, .08);
+}
+
+.admin-order-card h3 {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e7eef3;
+}
+
+.admin-order-details p {
+    overflow-wrap: anywhere;
+}
+
+.admin-order-actions label {
+    font-weight: 600;
+}
+
+.admin-order-actions select {
+    min-width: 145px;
+    background: #f8fbfd;
+}
+
+.admin-order-actions button {
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: background .25s ease, transform .25s ease;
+}
+
+.admin-order-actions button:hover {
+    transform: translateY(-2px);
+}
+
+@keyframes pharmacyAdminEnter {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .admin-order-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .admin-order-actions select,
+    .admin-order-actions button {
+        width: 100%;
+    }
+}

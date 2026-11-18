@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart | Laxido Pharmaceuticals</title>
+    <link rel="stylesheet" href="../css/cart.css">
+</head>
+<body>
+
+<main class="cart-page">
+
+    <header class="cart-header">
+        <span>LAXIDO PHARMA / SHOPPING CART</span>
+        <h1>My Shopping Cart</h1>
+        <p>Review your selected healthcare products before checkout.</p>
+    </header>
+
+    <div class="cart-layout">
+
+        <section class="cart-items-section">
+            <h2>Cart Items</h2>
+            <div id="cartItems">
+                <div class="empty-cart">
+                    <div class="empty-cart-icon">🛒</div>
+                    <h3>Your cart is empty</h3>
+                    <p>Add healthcare products to get started.</p>
+                    <a href="pharmacy-delivery.html">Explore Pharmacy Services</a>
+                </div>
+            </div>
+        </section>
+
+        <aside class="cart-summary">
+            <h2>Order Summary</h2>
+
+            <div class="summary-row">
+                <span>Subtotal</span>
+                <strong id="cartSubtotal">₹0</strong>
+            </div>
+
+            <div class="summary-row">
+                <span>Delivery</span>
+                <strong id="cartDelivery">₹0</strong>
+            </div>
+
+            <div class="summary-total">
+                <span>Total</span>
+                <strong id="cartTotal">₹0</strong>
+            </div>
+
+            <button id="checkoutButton" disabled>Proceed to Checkout</button>
+
+            <a class="continue-shopping" href="pharmacy-delivery.html">
+                Continue Shopping
+            </a>
+        </aside>
+
+    </div>
+
+</main>
+
+<script src="../js/cart.js"></script>
+</body>
+</html>

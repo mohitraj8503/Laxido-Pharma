@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Diagnostic Bookings | Laxido Pharma</title>
+    <link rel="stylesheet" href="../css/admin-bookings.css">
+</head>
+<body>
+
+    <main class="admin-bookings-page">
+        <header class="admin-page-header">
+            <span class="admin-eyebrow">LAXIDO PHARMA / ADMIN PANEL</span>
+            <nav class="admin-navigation">
+                <a href="admin-bookings.html" class="active">Booking Management</a>
+                <a href="admin-orders.html">Order Management</a>
+                <a href="admin-pharmacy.html">Pharmacy Requests</a>
+            </nav>
+            <h1>Booking Management</h1>
+            <p>Manage diagnostic tests and doctor appointments in one place.</p>
+        </header>
+
+        <section class="admin-section admin-diagnostics">
+            <div class="admin-section-heading">
+                <h2>Diagnostic Bookings</h2>
+                <p>Manage patient diagnostic test booking requests.</p>
+            </div>
+            <div id="adminBookingList">
+                <p>Loading diagnostic bookings...</p>
+            </div>
+        </section>
+
+        <section class="admin-section admin-appointments">
+            <div class="admin-section-heading">
+                <h2>Doctor Appointment Bookings</h2>
+                <p>Manage patient consultation requests.</p>
+            </div>
+            <div id="adminAppointmentList">
+                <p>Loading appointments...</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/admin-bookings.js"></script>
+</body>
+</html>

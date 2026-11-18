@@ -1,0 +1,195 @@
+.health-page {
+    color: #173650;
+    font-family: inherit;
+}
+
+.health-hero {
+    padding: 85px 7%;
+    text-align: center;
+    background: linear-gradient(120deg, #e7f8fa, #edf3ff);
+}
+
+.health-hero span,
+.health-heading span,
+.health-booking span {
+    color: #0799a8;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+
+.health-hero h1 {
+    font-size: clamp(32px, 5vw, 52px);
+    margin: 18px 0;
+}
+
+.health-hero p {
+    color: #62788b;
+    font-size: 17px;
+}
+
+.health-hero a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 25px;
+    border-radius: 8px;
+    background: #078eaa;
+    color: white;
+    text-decoration: none;
+}
+
+.health-packages {
+    padding: 70px 7%;
+}
+
+.health-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.health-heading h2,
+.health-booking h2 {
+    font-size: 32px;
+    margin: 12px 0;
+}
+
+.health-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.health-card {
+    padding: 30px;
+    border: 1px solid #e0eaf0;
+    border-radius: 16px;
+    background: white;
+    box-shadow: 0 8px 25px rgba(20, 70, 100, .06);
+    transition: transform .3s, box-shadow .3s;
+}
+
+.health-card:hover {
+    transform: translateY(-9px);
+    box-shadow: 0 18px 38px rgba(20, 100, 130, .14);
+}
+
+.health-card.featured {
+    border: 2px solid #0799a8;
+}
+
+.health-icon {
+    font-size: 38px;
+}
+
+.health-card h3 {
+    font-size: 21px;
+    margin: 16px 0 10px;
+}
+
+.health-card p,
+.health-note {
+    color: #687d8e;
+    line-height: 1.7;
+}
+
+.health-card li {
+    margin: 12px 0;
+    color: #526a7d;
+}
+
+.health-card button,
+.health-booking button {
+    width: 100%;
+    border: 0;
+    border-radius: 8px;
+    padding: 14px;
+    background: #078eaa;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.health-card button:hover,
+.health-booking button:hover {
+    background: #08718c;
+    transform: translateY(-2px);
+}
+
+.health-note {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.health-booking {
+    padding: 65px 7%;
+    background: #f0f7fa;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    align-items: center;
+}
+
+.health-booking form {
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 35px rgba(20, 70, 100, .08);
+}
+
+.health-booking label {
+    display: block;
+    margin: 14px 0 7px;
+    font-weight: 600;
+}
+
+.health-booking input,
+.health-booking select {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d8e3e9;
+    border-radius: 7px;
+    background: white;
+    font: inherit;
+}
+
+.health-booking input:focus,
+.health-booking select:focus {
+    outline: 2px solid #0799a8;
+    border-color: transparent;
+}
+
+.health-booking button {
+    margin-top: 22px;
+}
+
+#healthMessage {
+    color: #07834e;
+    font-weight: 600;
+}
+
+@media(max-width: 850px) {
+    .health-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media(max-width: 600px) {
+    .health-grid,
+    .health-booking {
+        grid-template-columns: 1fr;
+    }
+
+    .health-hero {
+        padding: 60px 6%;
+    }
+}
+
+@media(prefers-reduced-motion: reduce) {
+    .health-card,
+    .health-card button,
+    .health-booking button {
+        transition: none;
+    }
+}

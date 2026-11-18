@@ -1,0 +1,580 @@
+/* Diagnostics Page */
+
+.diagnostics-section {
+    padding: 75px 20px;
+    background: #f5f9fc;
+}
+
+.diagnostics-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.diagnostics-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 45px;
+}
+
+.diagnostics-heading span {
+    color: #1686a8;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.diagnostics-heading h2 {
+    color: #173b55;
+    font-size: 36px;
+    margin: 12px 0;
+}
+
+.diagnostics-heading p {
+    color: #64748b;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.diagnostics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.diagnostic-card {
+    background: #ffffff;
+    padding: 30px 24px;
+    border: 1px solid #e3edf3;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(23, 59, 85, 0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.diagnostic-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(23, 59, 85, 0.12);
+}
+
+.diagnostic-icon {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.diagnostic-card h3 {
+    color: #173b55;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.diagnostic-card p {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.7;
+    min-height: 48px;
+}
+
+.diagnostic-card a {
+    display: inline-block;
+    margin-top: 15px;
+    color: #087fa5;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.diagnostic-card a:hover {
+    color: #075d7a;
+}
+
+@media (max-width: 991px) {
+    .diagnostics-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 575px) {
+    .diagnostics-section {
+        padding: 50px 16px;
+    }
+
+    .diagnostics-heading h2 {
+        font-size: 27px;
+    }
+
+    .diagnostics-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Diagnostic Test Listing */
+
+.diagnostic-tests-section {
+    padding: 75px 20px;
+    background: #ffffff;
+}
+
+.diagnostic-tests-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.diagnostic-test-card {
+    padding: 26px;
+    border: 1px solid #e3edf3;
+    border-radius: 14px;
+    background: #ffffff;
+    box-shadow: 0 5px 20px rgba(23, 59, 85, 0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.diagnostic-test-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(23, 59, 85, 0.10);
+}
+
+.test-category {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: #e8f5fa;
+    color: #087fa5;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.diagnostic-test-card h3 {
+    margin: 18px 0 10px;
+    color: #173b55;
+    font-size: 20px;
+}
+
+.diagnostic-test-card p {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.test-price {
+    margin: 18px 0 10px;
+    color: #087fa5;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.diagnostic-test-card .test-preparation {
+    min-height: 40px;
+    font-size: 13px;
+}
+
+.diagnostic-book-btn {
+    width: 100%;
+    margin-top: 12px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 7px;
+    background: #087fa5;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.diagnostic-book-btn:hover {
+    background: #075d7a;
+}
+
+.test-disclaimer {
+    margin-top: 28px;
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+@media (max-width: 991px) {
+    .diagnostic-tests-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 575px) {
+    .diagnostic-tests-section {
+        padding: 50px 16px;
+    }
+
+    .diagnostic-tests-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Diagnostic Booking Form */
+#book-diagnostic-test {
+    max-width: 850px;
+    margin: 60px auto;
+    padding: 35px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+#book-diagnostic-test h2 {
+    color: #173b65;
+    font-size: 28px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.diagnostic-booking-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.diagnostic-booking-form label {
+    display: block;
+    color: #263b50;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.diagnostic-booking-form input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 15px;
+    border: 1px solid #d6e0eb;
+    border-radius: 8px;
+    background: #f8fafc;
+    color: #263b50;
+    font-size: 15px;
+    outline: none;
+}
+
+.diagnostic-booking-form input:focus {
+    border-color: #1769aa;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(23, 105, 170, 0.1);
+}
+
+.diagnostic-booking-form button {
+    grid-column: 1 / -1;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 8px;
+    background: #1769aa;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.diagnostic-booking-form button:hover {
+    background: #10558c;
+}
+
+#diagnosticBookingMessage {
+    grid-column: 1 / -1;
+    font-weight: 600;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    #book-diagnostic-test {
+        margin: 30px 15px;
+        padding: 22px 16px;
+    }
+
+    .diagnostic-booking-form {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Booking form field layout */
+#diagnosticBookingForm .booking-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#diagnosticBookingForm .booking-field label {
+    display: block !important;
+    color: #263b50 !important;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#diagnosticBookingForm .booking-field input {
+    display: block !important;
+    width: 100% !important;
+    min-height: 48px;
+    padding: 12px 15px !important;
+    border: 1px solid #d6e0eb !important;
+    border-radius: 8px !important;
+    background: #f8fafc !important;
+    color: #263b50 !important;
+    font-size: 15px !important;
+    box-sizing: border-box;
+}
+
+/* Smooth animations */
+.diagnostic-test-card,
+.diagnostics-grid > *,
+.diagnostic-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.diagnostic-test-card:hover,
+.diagnostics-grid > *:hover,
+.diagnostic-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(23, 59, 101, 0.12);
+}
+
+#book-diagnostic-test {
+    animation: diagnosticsFadeUp 0.7s ease both;
+}
+
+.diagnostic-booking-form button,
+.diagnostic-book-btn {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.diagnostic-booking-form button:hover,
+.diagnostic-book-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 16px rgba(23, 105, 170, 0.2);
+}
+
+@keyframes diagnosticsFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #book-diagnostic-test,
+    .diagnostic-test-card,
+    .diagnostics-grid > *,
+    .diagnostic-card,
+    .diagnostic-booking-form button,
+    .diagnostic-book-btn {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* ADVANCED PREMIUM DIAGNOSTICS ANIMATIONS */
+
+.diagnostic-test-card,
+.diagnostic-card,
+.diagnostics-grid > * {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    transition: transform 0.45s cubic-bezier(.2,.8,.2,1),
+                box-shadow 0.45s ease;
+}
+
+.diagnostic-test-card::before,
+.diagnostic-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        115deg,
+        transparent 20%,
+        rgba(255,255,255,.55) 45%,
+        transparent 70%
+    );
+    transform: translateX(-120%);
+    transition: transform .75s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.diagnostic-test-card:hover::before,
+.diagnostic-card:hover::before {
+    transform: translateX(120%);
+}
+
+.diagnostic-test-card:hover,
+.diagnostic-card:hover,
+.diagnostics-grid > *:hover {
+    transform: translateY(-10px) scale(1.015);
+    box-shadow: 0 20px 40px rgba(23, 59, 101, .16);
+}
+
+#book-diagnostic-test {
+    position: relative;
+    overflow: hidden;
+    animation: premiumReveal .9s cubic-bezier(.2,.8,.2,1) both;
+}
+
+#book-diagnostic-test::before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 240px;
+    height: 240px;
+    background: radial-gradient(circle, rgba(23,105,170,.12), transparent 70%);
+    animation: glowFloat 5s ease-in-out infinite alternate;
+    pointer-events: none;
+}
+
+.diagnostic-booking-form input {
+    transition: border-color .3s ease,
+                box-shadow .3s ease,
+                transform .3s ease;
+}
+
+.diagnostic-booking-form input:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 0 0 4px rgba(23,105,170,.12);
+}
+
+.diagnostic-booking-form button,
+.diagnostic-book-btn {
+    position: relative;
+    overflow: hidden;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.diagnostic-booking-form button:hover,
+.diagnostic-book-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(23,105,170,.25);
+}
+
+@keyframes premiumReveal {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+        filter: blur(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+@keyframes glowFloat {
+    from { transform: translate(0, 0) scale(1); }
+    to { transform: translate(-35px, 35px) scale(1.25); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+    }
+}
+
+/* ===== ADMIN APPOINTMENT ACTION BUTTONS ===== */
+
+.appointment-confirm-btn,
+.appointment-cancel-btn {
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 8px 5px 0;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .25s ease;
+}
+
+.appointment-confirm-btn {
+    background: #e7f7ed;
+    color: #168344;
+}
+
+.appointment-confirm-btn:hover {
+    background: #168344;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.appointment-cancel-btn {
+    background: #fff0f0;
+    color: #d93636;
+}
+
+.appointment-cancel-btn:hover {
+    background: #d93636;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.appointment-confirm-btn:disabled,
+.appointment-cancel-btn:disabled {
+    opacity: .55;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+
+/* ===== FINAL ADMIN BUTTON DESIGN ===== */
+
+.admin-bookings-page .appointment-confirm-btn,
+.admin-bookings-page .appointment-cancel-btn,
+.admin-appointments .appointment-confirm-btn,
+.admin-appointments .appointment-cancel-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 105px;
+    padding: 11px 18px;
+    margin: 12px 10px 8px 0;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .25s ease;
+}
+
+.admin-bookings-page .appointment-confirm-btn,
+.admin-appointments .appointment-confirm-btn {
+    background: #087fa5;
+    color: #fff;
+}
+
+.admin-bookings-page .appointment-confirm-btn:hover,
+.admin-appointments .appointment-confirm-btn:hover {
+    background: #075d7a;
+    box-shadow: 0 5px 14px rgba(8,127,165,.22);
+    transform: translateY(-2px);
+}
+
+.admin-bookings-page .appointment-cancel-btn,
+.admin-appointments .appointment-cancel-btn {
+    background: #fff0f0;
+    color: #c62828;
+    border-color: #ffd5d5;
+}
+
+.admin-bookings-page .appointment-cancel-btn:hover,
+.admin-appointments .appointment-cancel-btn:hover {
+    background: #c62828;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.admin-bookings-page button:disabled,
+.admin-appointments button:disabled {
+    opacity: .55;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
